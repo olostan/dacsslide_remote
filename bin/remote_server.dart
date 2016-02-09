@@ -21,7 +21,7 @@ void main() {
     sockets.remove(webSocket);
   });
 
-  shelf_io.serve(handler, 'localhost', 8080).then((server) {
+  shelf_io.serve(handler, '0.0.0.0', 8080).then((server) {
     print('Serving at ws://${server.address.host}:${server.port}');
   });
 }
